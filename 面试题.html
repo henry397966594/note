@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="tool" content="leanote-desktop-app">
+<title>面试题</title>
+<style>
+.tab{font-size:12px; margin-bottom: 10px;}
+.tab a{cursor:pointer;cursor:pointer;display:inline-block;margin-right:10px;color:#000}#tab-html{color:#ccc}
+
+.content-container .content-html{visibility: hidden;}
+.content-container.html .content-markdown{display:none}
+.content-container.html .content-html{display:block; visibility: visible;}
+.content-container.html #tab-markdown{color:#ccc}
+.content-container.html #tab-html{color:#000}
+.content-markdown {overflow: auto;}
+textarea {display: none;}
+
+*{font-family:"lucida grande","lucida sans unicode",lucida,helvetica,"Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;}
+
+body {
+  margin: 0;
+}
+
+/*公用文字样式*/
+h1{font-size:30px}h2{font-size:24px}h3{font-size:18px}h4{font-size:14px}
+.note-container{
+    width:850px; 
+    margin:auto;
+    padding: 10px 20px;
+    box-shadow: 1px 1px 10px #eee;
+}
+#title {
+  margin: 0;
+}
+table {
+    margin-bottom: 16px;
+    border-collapse: collapse;
+}
+table th, table td {
+    padding: 6px 13px;
+    border: 1px solid #ddd;
+}
+table th {
+    font-weight: bold;
+}
+
+table tr {
+    background-color: none;
+    border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+    background-color: rgb(247, 247, 249);
+}
+.mce-item-table, .mce-item-table td, .mce-item-table th, .mce-item-table caption {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  padding: 6px 13px;
+}
+blockquote {
+  border-left-width:10px;
+  background-color:rgba(128,128,128,0.05);
+  border-top-right-radius:5px;
+  border-bottom-right-radius:5px;
+  padding:15px 20px;
+  border-left:5px solid rgba(128,128,128,0.075);
+}
+blockquote p {
+  margin-bottom:1.1em;
+  font-size:1em;
+  line-height:1.45
+}
+blockquote ul:last-child,blockquote ol:last-child {
+  margin-bottom:0
+}
+pre {
+  padding: 18px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  border-radius: 3px;
+  display: block;
+}
+code {
+  padding: 2px 4px;
+  font-size: 90%;
+  color: #c7254e;
+  white-space: nowrap;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+.footnote {
+  vertical-align: top;
+  position: relative;
+  top: -0.5em;
+  font-size: .8em;
+}
+
+hr {
+  margin:2em 0
+}
+img {
+  max-width:100%;
+  display: block;
+  margin: auto;
+}
+pre {
+  word-break:break-word
+}
+p,pre,pre.prettyprint,blockquote {
+  margin:0 0 1.1em
+}
+hr {
+  margin:2em 0
+}
+img {
+  max-width:100%
+}
+.sequence-diagram,.flow-chart {
+  text-align:center;
+  margin-bottom:1.1em
+}
+.sequence-diagram text,.flow-chart text {
+  font-size:15px !important;
+  font-family:"Source Sans Pro",sans-serif !important
+}
+.sequence-diagram [fill="#ffffff"],.flow-chart [fill="#ffffff"] {
+  fill:#f6f6f6
+}
+.sequence-diagram [stroke="#000000"],.flow-chart [stroke="#000000"] {
+  stroke:#3f3f3f
+}
+.sequence-diagram text[stroke="#000000"],.flow-chart text[stroke="#000000"] {
+  stroke:none
+}
+.sequence-diagram [fill="#000"],.flow-chart [fill="#000"],.sequence-diagram [fill="#000000"],.flow-chart [fill="#000000"],.sequence-diagram [fill="black"],.flow-chart [fill="black"] {
+  fill:#3f3f3f
+}
+ul,ol {
+  margin-bottom:1.1em
+}
+ul ul,ol ul,ul ol,ol ol {
+  margin-bottom:1.1em
+}
+kbd {
+  padding:.1em .6em;
+  border:1px solid rgba(63,63,63,0.25);
+  -webkit-box-shadow:0 1px 0 rgba(63,63,63,0.25);
+  box-shadow:0 1px 0 rgba(63,63,63,0.25);
+  font-size:.7em;
+  font-family:sans-serif;
+  background-color:#fff;
+  color:#333;
+  border-radius:3px;
+  display:inline-block;
+  margin:0 .1em;
+  white-space:nowrap
+}
+.toc ul {
+  list-style-type:none;
+  margin-bottom:15px
+}
+.m-todo-item {
+  list-style: none;
+}
+pre code {
+  padding: 0;
+  color: inherit;
+  white-space: pre-wrap;
+  background-color: inherit;
+  border-radius: 0;
+}
+</style>
+<!-- 该css供自定义样式 -->
+<link href="../leanote-markdown.css" rel="stylesheet">
+</head>
+
+<body>
+
+	<div class="note-container">
+		<h1 class="title" id="leanote-title">面试题</h1>
+		<div class="content-container html" id="content-container">
+			<!-- 切换 -->
+			<div class="tab"><a id="tab-markdown">Markdown</a><a id="tab-html">HTML</a></div>
+			<textarea id="leanote-content-markdown">#假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应。
+- 浮动布局
+
+```
+.box .right{
+        background-color: blue;
+        width: 300px;
+        float: right;
+    }
+
+    .box .center{
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+        background-color: orange;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center">第一种方法：浮动</div>
+</div>
+
+</body>
+</html>
+```
+
+- 解决方案二：使用绝对定位布局
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box>div{
+            height: 100px;
+            position: absolute;
+        }
+
+        .box .left{
+            background-color: red;
+            width: 300px;
+            left: 0;
+        }
+
+        .box .right{
+            background-color: blue;
+            width: 300px;
+            right: 0;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+            left: 300px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第二种方法：定位</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+//abosulute属性的元素有包裹性  如果不设置宽高的话  自适应元素内部的内容 这里用left  和right值的设置来自适应外部元素
+```
+
+- 使用flex布局
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: flex;
+        }
+
+        .box>div{
+            height: 100px;
+        }
+
+        .box .left{
+            background-color: red;
+            width: 300px;
+        }
+
+        .box .right{
+            background-color: blue;
+            width: 300px;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+            
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第三种方法：flexbox布局</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+```
+- 方案四、表格布局
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: table;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box>div{
+            display: table-cell;
+        }
+
+        .box .left{
+            background-color: red;
+            width: 300px;
+        }
+        .box .right{
+            background-color: blue;
+            width: 300px;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第四种方法：表格布局</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+```
+
+- 方案五：grid布局
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: grid;
+            width: 100%;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+        }
+
+        .box .left{
+            background-color: red;
+        }
+
+        .box .right{
+            background-color: blue;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第五种方法：网格布局</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+```
+
+# CSS选择器有哪些？有哪些新特性？有哪些伪类？
+> 1)      id选择器(# myid)
+
+> 2)      类选择器(.myclassname)
+
+> 3)      标签选择器(div, h1, p)
+
+> 4)      相邻选择器(h1 + p)
+
+> 5)      子选择器(ul > li)
+
+> 6)      后代选择器(li a)
+
+> 7)      通配符选择器( * )
+
+> 8)      属性选择器(a[rel = "external"])
+
+> 9)      伪类选择器(a: hover, li:nth-child)
+
+## 新特性
+
+    CSS3实现圆角（border-radius），阴影（box-shadow），
+
+    对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+
+    transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);// 旋转,缩放,定位,倾斜
+
+    增加了更多的CSS选择器  多背景 rgba 
+
+    在CSS3中唯一引入的伪元素是 ::selection.
+
+    媒体查询，多栏布局
+
+    border-image
+## CSS3新增伪类举例：
+    1)      p:first-of-type  选择属于其父元素的首个 <p> 元素的每个 <p> 元素。
+
+    2)      p:last-of-type   选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+
+    3)      p:only-of-type  选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。
+
+    4)      p:only-child     选择属于其父元素的唯一子元素的每个 <p> 元素。
+
+    5)      p:nth-child(2)  选择属于其父元素的第二个子元素的每个 <p> 元素。
+
+    6)      :enabled :disabled 控制表单控件的禁用状态。
+    
+    7)      :checked         单选框或复选框被选中。
+    
+    
+#清除浮动的几种方式，优缺点
+- １父级div定义height
+
+　　原理：父级div手动定义height，就解决了父级div无法自动获取到高度的问题
+　　优点：简单，代码少，容易掌握
+　　缺点：只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题
+　建议：不推荐使用，只建议高度固定的布局时使用
+　
+- ２结尾处加空div标签clear:both
+　  原理：添加一个空div，利用css提高的clear:both清除浮动，让父级div能自动获取到高度
+    优点：简单，代码少，浏览器支持好，不容易出现怪问题
+　  缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，让人感觉很不爽
+　  建议：不推荐使用，但此方法是以前主要使用的一种清除浮动方法
+　
+- ３父级div定义伪类:after和zoom
+    原理：IE8以上和非IE浏览器才支持:after，原理和方法2有点类似，zoom(IE转有属性)可解决ie6,ie7浮动问题
+    优点：浏览器支持好，不容易出现怪问题（目前：大型网站都有使用，如：腾迅，网易，新浪等等）
+    缺点：代码多，不少初学者不理解原理，要两句代码结合使用，才能让主流浏览器都支持
+建议：推荐使用，建议定义公共类，以减少CSS代码
+
+- ４父级div定义overflow:hidden
+    
+    原理：必须定义width或zoom:1，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度
+    优点：简单，代码少，浏览器支持好
+    缺点：不能和position配合使用，因为超出的尺寸的会被隐藏
+    建议：只推荐没有使用position或对overflow:hidden理解比较深的朋友使用
+    
+- 5父级div定义overflow:auto
+    原理：必须定义width或zoom:1，同时不能定义height，使用overflow:auto时，浏览器会自动检查浮动区域的高度
+优点：简单，代码少，浏览器支持好
+缺点：内部宽高超过父级div时，会出现滚动条。
+建议：不推荐使用，如果你需要出现滚动条或者确保你的代码不会出现滚动条就使用吧。
+
+
+#图片如何实现垂直剧中的
+- 方法一
+将外部容器的显示模式设置成display:table，这个设置的意思不用多说了吧… img标签外部再嵌套一个span标签，并设置span的显示模式为display:table-cell，这样span内部的内容就相当于表格，可以很方便的使用vertical-align属性来对齐其中的内容了。
+```
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>方法1 - 未知高度的图片垂直居中 - www.cleanthem.com</title>
+<style type="text/css">
+body {
+    height:100%;
+}
+#box{
+    width:500px;height:400px;
+    display:table;
+    text-align:center;
+    border:1px solid #d3d3d3;background:#fff;
+}
+#box span{
+    display:table-cell;
+    vertical-align:middle;
+}
+#box img{
+    border:1px solid #ccc;
+}
+</style>
+<!--[if lte IE 7]>
+<style type="text/css">?
+#box{
+    position:relative;
+    overflow:hidden;
+}
+#box span{
+    position:absolute;
+    left:50%;top:50%;
+}
+#box img{
+    position:relative;
+    left:-50%;top:-50%;
+}
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="box">
+    <span><img src="images/demo_zl.png" alt="" /></span>
+</div>
+
+</body>
+</html>
+```
+
+- 方法2：
+在img标签外包裹一个p标签，标准浏览器利用p标签的伪类属性:before来实现居中，另外，对于IE6/IE7使用了CSS表达式来实现兼容。
+
+```
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>方法3 - 未知高度的图片垂直居中 - www.cleanthem.com</title>
+
+<style type="text/css">
+body {
+    height:100%;
+}
+#box{
+    width:500px;height:400px;
+    text-align:center;
+    border:1px solid #d3d3d3;background:#fff;
+}
+#box p{
+    width:500px;height:400px;
+    line-height:400px;  /* 行高等于高度 */
+}
+
+/* 兼容标准浏览器 */
+#box p:before{
+    content:".";  /* 具体的值与垂直居中无关，尽可能的节省字符 */
+    margin-left:-5px; font-size:10px;  /* 修复居中的小BUG */
+    visibility:hidden;  /*设置成隐藏元素*/
+}
+
+#box p img{
+    *margin-top:expression((400 - this.height )/2);  /* CSS表达式用来兼容IE6/IE7 */
+    vertical-align:middle;
+    border:1px solid #ccc;
+}
+</style>
+
+</head>
+
+<body>
+<div id="box">
+    <p><img src="images/demo_zl.png" alt="" /></p>
+</div>
+
+</body>
+</html>
+```
+#css hack你知道哪些？([CSS hack方式一览 ](http://blog.csdn.net/freshlover/article/details/12132801))
+- 什么是CSS hack?
+    - 由于不同厂商的流览器或某浏览器的不同版本（如IE6-IE11,Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时，我们为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器/不同版本写相应的CSS code的过程，叫做CSS hack!
+- CSS hack的原理
+    - 由于不同的浏览器和浏览器各版本对CSS的支持及解析结果不一样，以及CSS优先级对浏览器展现效果的影响，我们可以据此针对不同的浏览器情景来应用不同的CSS。
+    
+- CSS hack分类
+    - CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及IE条件注释法（即HTML头部引用if IE）Hack，实际项目中CSS Hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。
+    >
+    属性前缀法(即类内部Hack)：例如 IE6能识别下划线"_"和星号" * "，IE7能识别星号" * "，但不能识别下划线"_"，IE6~IE10都认识"\9"，但firefox前述三个都不能认识。
+    选择器前缀法(即选择器Hack)：例如 IE6能识别*html .class{}，IE7能识别*+html .class{}或者*:first-child+html .class{}。
+    IE条件注释法(即HTML条件注释Hack)：针对所有IE(注：IE10+已经不再支持条件注释)： <!--[if IE]>IE浏览器显示的内容 <![endif]-->，针对IE6及以下版本： <!--[if lt IE 6]>只在IE6-显示的内容 <![endif]-->。这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。
+    
+#谈谈你对CSS盒模型的认识  
+- **标准模型和IE模型的区别?**
+
+    - 这两者的关键差别就在于：W3C盒子模型——属性高（height）和属性宽（width）这两个值不包含 填充（padding）和边框（border）;IE盒子模型——属性高（height）和属性宽（width）这两个值包含 填充（padding）和边框（border）。
+- **CSS是如何设置这两种模型?**
+    - （1）“标准模式”下各个浏览器是没有区别的，以宽度为例：总宽度=marginLeft+borderLeft+paddingLeft+contentWidth+paddingRight+borderRight+marginRight（W3C标准盒子模型）。页面在“怪异模式”下，css中为元素的width和height设置的值在标准浏览器和ie系列(ie9除外)里的代表的含义是不同的（IE盒子模型）。也就是说在‘怪异模式’下ie浏览器使用的是I盒子模型。
+    （2）标准模式和怪异模式的来由？
+    在HTML与CSS的标准化未完成之前，各个浏览器对于HTML和CSS的解析有各自不同的实现，而有很多旧的网页都是按照这些非标准的实现去设计的。在HTML与CSS标准确定之后，浏览器一方面要按照标准去实现对HTML与CSS的支持，另一方面又要保证对非标准的旧网页设计的后向兼容性。因此，现代的浏览器一般都有两种渲染模式：标准模式和怪异模式。在标准模式下，浏览器按照HTML与CSS标准对文档进行解析和渲染；而在怪异模式下，浏览器则按照旧有的非标准的实现方式对文档进行解析和渲染。这样的话，对于旧有的网页，浏览器启动怪异模式，就能够使得旧网页正常显示；对于新的网页，则可以启动标准模式，使得新网页能够使用HTML与CSS的标准特性。
+    （3）浏览器如何确定使用哪种渲染模式
+    知道了这两种渲染模式的来由，那剩下的问题就是浏览器如何能够确定应该使用哪种模式了。其实归根结底就是，浏览器如何能将旧网页与新网页区分开来。
+    平常编写网页的时候，一般都会见到HTML文档的头部会有文档类型声明：DOCTYPE。当浏览器遇到正确的文档声明时，浏览器就会启动标准模式，按照制定的文档类型标准解析和渲染文档。而对于旧有的网页，由于网页编写的当时标准还没有确定，所以一般是不会有文档类型声明的。所以，对于没有文档类型声明或者文档类型声明不正确的文档，浏览器就会认为它是一个旧的HTML文档，就会使用怪异模式解析和渲染该文档。关于DOCTYPE的更详细说明，请戳这里 DOCTYPE声明作用及用法详解。
+    （4）如何兼容IE模型
+    前提是页面处于“怪异模式”，“标准模式”不存在兼容性问题。
+- **JS如何设置和获取盒模型对应的宽和高?([JavaScript盒子模型及其属性](http://www.jianshu.com/p/00497091d3bb))**
+    - clientWidth/ clientHeight: 是当前浏览器可视窗口(一屏幕的)的宽度和高度。
+scrollWidth/ scrollHeight: 是当前页面的实际宽度和高度(所有屏加起来的宽度和高度), 这些是约等于的值。
+不管哪些属性，也不管是什么浏览器，也不管是获取还是设置，想要都兼容，需要写两套:
+document.documentElement[attr]||document.body[attr];必须document.documentElement在前
+
+```   
+document.documentElement.clientWidth || document.body.clientWidth;          document.documentElement.scrollTop || document.body.scrollTop;          document.documentElement.scrollTop = 0; document.body.scrollTop = 0;
+
+```
+    
+```
+// win: 编写一个有关于操作浏览器盒子模型的方法 // 如果值传递了attr, 没有传递value, 默认的意识是获取样式值。 // 如果两个参数都传递了, 意思是设置某一个样式属性的值。 function win(attr, value) { if (typeof value === 'undefined') { // 说明没有传递value return document.documentElement[attr] || document.body[attr]; } document.documentElement[attr] = value; document.body[attr] = value; }
+
+
+```
+
+- **什么是优雅降级和渐进增强**[优雅降级,渐进增强](http://www.jianshu.com/p/d313f1108862)
+>优雅降级=>一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用 CSS3 的特性构建了一个应用，然后逐步针对各大浏览器进行 hack 使其可以在低版本浏览器上正常浏览。
+
+>渐进增强=>一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。
+
+----------
+
+
+
+> - 优雅降级观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。
+> - 渐进增强观点则认为应关注于内容本身。请注意其中的差别：我甚至连“浏览器”三个字都没提。内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得渐进增强成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。
+
+# 谈谈你对BFC的了解([BFC](http://blog.csdn.net/riddle1981/article/details/52126522))
+> - **什么是BFC**
+BFC(block formatting context）：简单来说，BFC 就是一种属性，这种属性会影响着元素的定位以及与其兄弟元素之间的相互作用。
+- **形成BFC的条件**
+1、浮动元素，float 除 none 以外的值；
+2、绝对定位元素，position（absolute，fixed）；
+3、display 为以下其中之一的值 inline-blocks，table-cells，table-captions；
+4、overflow 除了 visible 以外的值（hidden，auto，scroll）
+- BFC **应用场景**
+1. 清除内部浮动
+我们在布局时经常会遇到这个问题：对子元素设置浮动后，父元素会发生高度塌陷，也就是父元素的高度变为0。解决这个问题，只需要把把父元素变成一个BFC就行了。常用的办法是给父元素设置overflow:hidden。
+2. 垂直margin合并
+在CSS当中，相邻的两个盒子的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。
+折叠的结果：
+3. 1.两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值  
+   2.两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+   3 两个外边距一正一负时，折叠结果是两者的相加的和
+
+#js类
+# DOM事件
+- **DOM 事件级别有哪些？**
+>dom 0 级 dom2 级
+
+- **描述DOM事件捕获和冒泡的具体流程?**
+> 1 捕获阶段=>先由文档的根节点document往事件触发对象，从外向内捕获事件对象；
+  2 到达目标事件位置（事发地），触发事件；
+  3再从目标事件位置往文档的根节点方向回溯，从内向外冒泡事件对象。
+  
+  ![](面试题_files/59c367380466846053000000.png)
+  
+- **event 对象常见应用场景**  
+
+  ![](面试题_files/59c3684c0466846053000001.png)
+- **事件委托是什么**
+> 而事件委托就是利用的DOM事件的事件捕获阶段。把具体dom上发生的事件，委托给更大范围的dom去处理。好比送信员，如果每次都把信件送给每一户，非常繁琐。但是如果交给一个大范围的管理者，比如小区的传达室，那么事情会变得非常简单。事件委托就类似这种原理，我页面中有很多按钮，如果不使用事件委托，我只能在每个按钮上注册事件。非常麻烦。但如果我把事件注册在一个大范围的div（假设所有的按钮都在这个div中），那么我只要注册一次事件，就可以处理所有按钮（只要按钮包含在上述div中）事件的响应了。
+
+- 事件冒泡,e.target和e.currentTarget的区别?([e.target和e.currentTarget区别](http://www.jianshu.com/p/1dd668ccc97a))
+>MDN中对target的解释为，一个触发事件的对象的引用， 当事件处理程序在事件的冒泡或捕获阶段被调用时。
+而对于currentTarget，它指的是当事件遍历DOM时，标识事件的当前目标。它总是引用事件处理程序附加到的元素，而不是event.target，它标识事件发生的元素。
+
+- **浏览器的兼容问题 Js**([浏览器的兼容问题](http://www.jianshu.com/p/419436afc845))
+> 1 event 事件问题
+  2 浏览器宽高问题
+  3 DOM节点相关的问题
+  4 获取元素的非行间样式值
+  5 设置监听事件
+  6 阻止默认事件
+  
+# js 原生
+- **JS中有哪些数据类型**
+> 基本数据类型：Number String Boolean null undefind
+  引用数据类型：数组类型（array），对象类型（object），函数类型（function），正则类型（regexp）
+  
+- **什么是闭包？闭包作用？在工作中是如何应用的?**  
+> 3、闭包的概念
+ 各种专业文献的闭包定义都非常抽象，我的理解是: 闭包就是能够读取其他函数内部变量的函数。
+ 由于在javascript中，只有函数内部的子函数才能读取局部变量，所以说，闭包可以简单理解成“定义在一个函数内部的函数“。
+ 所以，在本质上，闭包是将函数内部和函数外部连接起来的桥梁。
+ 4、闭包的用途
+ 闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中，不会在f1调用后被自动清除。 
+ 
+- **JS实现继承的几种方式?** 
+> 1.原型链继承
+  2.借用构造函数继承
+  3.组合式继承
+  4.原型式继承
+  5.寄生式继承
+  6.寄生式组合继承
+  
+- **创建对象的三种方式** 
+> 第一种模式：工厂方式 
+
+ ```
+var lev=function(){
+return "脚本之家";
+};
+function Parent(){
+var Child = new Object();
+Child.name="脚本";
+Child.age="4";
+Child.lev=lev;
+return Child;
+};
+var x = Parent();
+alert(x.name);
+alert(x.lev()); 
+ ```
+- **new Person()时发生了什么**
+> A：将Person.class文件加载到内存中。
+                B：在堆内存中创建一个对象Person。
+                C：把Person中的属性进行默认初始化。
+                D：把Person中的属性进行显示初始化。
+                E：调用构造代码块(如果没有，不执行这个操作)。
+                F：调用构造函数进行初始化。
+                G：在栈内存中声明Person类型的变量P。
+                H：把堆内存的地址(引用)赋给了栈内存中P。
+- **什么是深拷贝和浅拷贝？**
+
+ > 浅拷贝：浅拷贝是拷贝引用，拷贝后的引用都是指向同一个对象的实例，彼此之间的操作会互相影响
+深拷贝：在堆中重新分配内存，并且把源对象所有属性都进行新建拷贝，以保证深拷贝的对象的引用图不包含任何原有对象或对象图上的任何对象，拷贝后的对象与原来的对象是完全隔离，互不影响
+- **手工模拟完整的bind方法**([bind方法](http://blog.csdn.net/daimomo000/article/details/72897035))
+```
+Function.prototype.bind2 = function (context) {
+
+    if (typeof this !== "function") {
+      throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+    }
+
+    var self = this;
+    var args = Array.prototype.slice.call(arguments, 1);
+    var fNOP = function () {};
+
+    var fbound = function () {
+        self.apply(this instanceof self ? this : context, args.concat(Array.prototype.slice.call(arguments)));
+    }
+
+    fNOP.prototype = this.prototype;
+    fbound.prototype = new fNOP();
+
+    return fbound;
+
+}
+```
+- **什么是节流和防抖？**
+> 节流：如果用手指一直按住一个弹簧，它将不会弹起直到你松手为止。
+ 也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
+ ```
+
+ var debounce = function(idle, action){
+  var last
+  return function(){
+    var ctx = this, args = arguments
+    clearTimeout(last)
+    last = setTimeout(function(){
+        action.apply(ctx, args)
+    }, idle)
+  }
+}
+ ```
+> 防抖:如果将水龙头拧紧直到水是以水滴的形式流出，那你会发现每隔一段时间，就会有一滴水流出。
+ 也就是会说预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期。
+    ```
+var throttle = function(delay, action){
+  var last = 0return function(){
+    var curr = +new Date()
+    if (curr - last > delay){
+      action.apply(this, arguments)
+      last = curr 
+    }
+  }
+}
+    ```
+- **上拉刷新和下拉加载的实现原理？**
+> 监听scroll事件，判断已滚动的距离离屏幕底部多远，超过阙值，就去拉取数据
+```
+ onPullUpMove(e) {
+    // 使用 pageY 对比有问题
+    if (e.touches[0].screenY < this._pullUpStartPageY && this._reachBottom()) {
+      // console.log('滚动条到了底部，pull up');
+      this._isPullUp = true;
+    }
+  },
+  onPullUpEnd(e) {
+    if (this._isPullUp && this.props.onEndReached) {
+      this.props.onEndReached(e);
+    }
+    this._isPullUp = false;
+  },
+  _reachBottom() {
+    const element = this._pullUpEle;
+    if (element === document.body) {
+      return element.scrollHeight - element.scrollTop === window.innerHeight;
+    }
+    return element.scrollHeight - element.scrollTop === element.clientHeight;
+  }
+```
+- **写一个验证邮件的正则表达式**
+> ^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$
+
+- 事件绑定和普通事件的区别
+> 普通事件中的onclick是DOM0级事件只支持单个事件，会被其他onclick事件覆盖，而事件绑定中的addEventListener是DOM2级事件可以添加多个事件而不用担心被覆盖
+
+- **JAVASCRIPT 的模板引擎的实现用过什么？原理是什么**
+
+
+        正则抠出要匹配的内容
+        装入数组
+        分辨js逻辑部分
+        引擎函数
+        把data扔进去
+
+- **合并两个对象** 
+> Object.assign
+
+- **动态向一个div中插入1000个div标签，如何实现？（考性能）**
+> 不太会，得好好查查
+
+- HTML5新特性
+> 如：绘图canvas；用于媒介回放的video和audio元素；本地存储localStorage;语义化元素；表单控件等等新增的功能，都是HTML5新特性。
+- 严格模式和非严格模式的区别
+> （前三条非常重要）
+1.在严格模式中禁止使用width语句；
+2.在严格模式中，所有的变量都要先声明；（在非中，这种隐式声明的全局变量的方法是给全局对象新添加一个新属性）；
+3.在严格模式中，调用的函数中的一个this值是undefined（在非中，调用的函数中的this总数全局对象）；
+如何判定JavaScript实现是否支持严格模式：
+var hasStrictMode = (function(){
+"use strict";
+return this===undefined
+}())
+4.在严格模式中，当通过call（）或apply（）来调用函数时，其中的this值就是通过call（）或者apply（）传入的第一个参数；（在非中，null和undefined被全局对象和转换为对象的非对象值所替代）；
+5.在严格模式中，给只读属性赋值和给不可扩展的对象创建新成员都将抛出一个类型错误异常；（在非中，这些操作只是简单地操作失败，不会报错）；
+6.在严格模式中，传入eval（）的代码不能在调用程序所在的上下文中声明变量或定义函数；（在非中，可以这样做，相反，变量和函数的定义是在eval（）创建的新作用域中，这个作用域在eval（）返回时就弃用了）
+
+- **对于js中浮点数计算会丢失精度的问题**
+>Javascript采用了IEEE-745浮点数表示法（几乎所有的编程语言都采用），这是一种二进制表示法，可以精确地表示分数，比如1/2，1/8，1/1024。遗憾的是，我们常用的分数（特别是在金融的计算方面）都是十进制分数1/10，1/100等。二进制浮点数表示法并不能精确的表示类似0.1这样 的简单的数字，上诉代码的中的x和y的值非常接近最终的正确值，这种计算结果可以胜任大多数的计算任务：这个问题也只有在比较两个值是否相等时才会出现。
+javascript的未来版本或许会支持十进制数字类型以避免这些舍入问题，在这之前，你更愿意使用大整数进行重要的金融计算，例如，要使用整数‘分’而不是使用小数‘元’进行货比单位的运算---------以上整理自《Javascript权威指南P37》
+
+#JQuery
+- **jquery.extend , jquery.fn.extend的区别**
+> 两者调用方式不同：
+jQuery.extend(),一般由传入的全局函数来调用，主要是用来拓展个全局函数，如$.init()，$.ajax();
+jQuery.fn.extend(),一般由具体的实例对象来调用，可以用来拓展个选择器，例如$.fn.each();
+两者的主要功能作用不同：
+jQuery.extend(object); 为扩展jQuery类本身，为自身添加新的方法。
+jQuery.fn.extend(object);给jQuery对象添加方法
+
+- **谈一下jquery中的bind，live，delegate，on区别**
+![](面试题_files/59c3a07a4aa36332b4000000.png)
+
+- **document.ready和document.load和$(function(){})有什么区别？**
+> ready和load中ready先执行，load后执行。
+DOM文档加载步骤：
+1）解析HTML结构；
+2）加载外部脚本和样式文件；
+3）解析并执行脚本代码；
+4）构造HTML DOM模型 ；//ready
+5）加载图片等外部文件；
+6）页面加载完毕。//load
+从以上描述可以看出，ready在第（4）步完成之后就执行，而load在第（6）步完成之后才执行
+ready事件：
+ready事件在DOM结构绘制完成之后就会执行，这样能确保就算有大量的媒体文件没有加载出来，JS代码一样可以执行
+load事件：
+load事件必须等到网页中所有内容全部加载完毕之后才被执行。如果一页网页有大量图片的话，则就出现网页文档已经呈现出来但网页数据(脚本初始化)还没加载完毕，导致load事件不能够即时被触发.
+总结：
+ready事件先于load事件被激活，如果网页文档中没有加载外部文件，则它们的响应时间基本上是相同的. 
+
+- **$.data()和$('#aaa').data()各自作用是什么？有什么区别**
+> data() 方法向被选元素附加数据，或者从被选元素获取数据。
+$(#aaa).data()从备选元素返回附加数据
+
+# ES6
+- **什么时候应该用箭头函数？什么时候不能用？ － 请写出ES6中Array.isArray()的实现代码**（[箭头函数的使用](https://zhuanlan.zhihu.com/p/26540168)）
+> 1. 定义对象方法
+1.2 定义原型方法
+
+----------
+>2. 定义事件回调函数
+3. 定义构造函数
+
+- **如何在项目中解析处理es6和es7代码**
+>webpack + Babel 
+
+- **Promise常用方法，Promise.race的作用，then方法里reject和catch的区别**([promise](http://www.cnblogs.com/lvdabao/p/es6-promise-1.html))
+> 
+1.处理异步回调
+2.多个异步函数同步处理
+3.异步依赖异步回调
+4.封装统一的入口办法或者错误处理
+ 二.谁跑的快调用谁！与Promise.all相似的是，Promise.race都是以一个Promise对象组成的数组作为参数，不同的是，只要当数组中的其中一个Promsie状态变成resolved或者rejected时，就可以调用.then方法了。而传递给then方法的值也会有所不同，大家可以再浏览器中运行下面的例子与上面的例子进行对比。
+ 
+----------
+> 
+
+</textarea>
+			<!-- markdown -->
+			<pre class="content-markdown">#假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应。
+- 浮动布局
+
+```
+.box .right{
+        background-color: blue;
+        width: 300px;
+        float: right;
+    }
+
+    .box .center{
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+        background-color: orange;
+    }
+</style>
+</head>
+<body>
+
+<div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+    <div class="center">第一种方法：浮动</div>
+</div>
+
+</body>
+</html>
+```
+
+- 解决方案二：使用绝对定位布局
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box>div{
+            height: 100px;
+            position: absolute;
+        }
+
+        .box .left{
+            background-color: red;
+            width: 300px;
+            left: 0;
+        }
+
+        .box .right{
+            background-color: blue;
+            width: 300px;
+            right: 0;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+            left: 300px;
+            right: 300px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第二种方法：定位</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+//abosulute属性的元素有包裹性  如果不设置宽高的话  自适应元素内部的内容 这里用left  和right值的设置来自适应外部元素
+```
+
+- 使用flex布局
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: flex;
+        }
+
+        .box>div{
+            height: 100px;
+        }
+
+        .box .left{
+            background-color: red;
+            width: 300px;
+        }
+
+        .box .right{
+            background-color: blue;
+            width: 300px;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+            
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第三种方法：flexbox布局</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+```
+- 方案四、表格布局
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: table;
+            width: 100%;
+            height: 100px;
+        }
+
+        .box>div{
+            display: table-cell;
+        }
+
+        .box .left{
+            background-color: red;
+            width: 300px;
+        }
+        .box .right{
+            background-color: blue;
+            width: 300px;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第四种方法：表格布局</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+```
+
+- 方案五：grid布局
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .box{
+            display: grid;
+            width: 100%;
+            grid-template-rows: 100px;
+            grid-template-columns: 300px auto 300px;
+        }
+
+        .box .left{
+            background-color: red;
+        }
+
+        .box .right{
+            background-color: blue;
+        }
+
+        .box .center{
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box">
+        <div class="left"></div>
+        <div class="center">第五种方法：网格布局</div>
+        <div class="right"></div>
+    </div>
+
+</body>
+</html>
+```
+
+# CSS选择器有哪些？有哪些新特性？有哪些伪类？
+> 1)      id选择器(# myid)
+
+> 2)      类选择器(.myclassname)
+
+> 3)      标签选择器(div, h1, p)
+
+> 4)      相邻选择器(h1 + p)
+
+> 5)      子选择器(ul > li)
+
+> 6)      后代选择器(li a)
+
+> 7)      通配符选择器( * )
+
+> 8)      属性选择器(a[rel = "external"])
+
+> 9)      伪类选择器(a: hover, li:nth-child)
+
+## 新特性
+
+    CSS3实现圆角（border-radius），阴影（box-shadow），
+
+    对文字加特效（text-shadow、），线性渐变（gradient），旋转（transform）
+
+    transform:rotate(9deg) scale(0.85,0.90) translate(0px,-30px) skew(-9deg,0deg);// 旋转,缩放,定位,倾斜
+
+    增加了更多的CSS选择器  多背景 rgba 
+
+    在CSS3中唯一引入的伪元素是 ::selection.
+
+    媒体查询，多栏布局
+
+    border-image
+## CSS3新增伪类举例：
+    1)      p:first-of-type  选择属于其父元素的首个 <p> 元素的每个 <p> 元素。
+
+    2)      p:last-of-type   选择属于其父元素的最后 <p> 元素的每个 <p> 元素。
+
+    3)      p:only-of-type  选择属于其父元素唯一的 <p> 元素的每个 <p> 元素。
+
+    4)      p:only-child     选择属于其父元素的唯一子元素的每个 <p> 元素。
+
+    5)      p:nth-child(2)  选择属于其父元素的第二个子元素的每个 <p> 元素。
+
+    6)      :enabled :disabled 控制表单控件的禁用状态。
+    
+    7)      :checked         单选框或复选框被选中。
+    
+    
+#清除浮动的几种方式，优缺点
+- １父级div定义height
+
+　　原理：父级div手动定义height，就解决了父级div无法自动获取到高度的问题
+　　优点：简单，代码少，容易掌握
+　　缺点：只适合高度固定的布局，要给出精确的高度，如果高度和父级div不一样时，会产生问题
+　建议：不推荐使用，只建议高度固定的布局时使用
+　
+- ２结尾处加空div标签clear:both
+　  原理：添加一个空div，利用css提高的clear:both清除浮动，让父级div能自动获取到高度
+    优点：简单，代码少，浏览器支持好，不容易出现怪问题
+　  缺点：不少初学者不理解原理；如果页面浮动布局多，就要增加很多空div，让人感觉很不爽
+　  建议：不推荐使用，但此方法是以前主要使用的一种清除浮动方法
+　
+- ３父级div定义伪类:after和zoom
+    原理：IE8以上和非IE浏览器才支持:after，原理和方法2有点类似，zoom(IE转有属性)可解决ie6,ie7浮动问题
+    优点：浏览器支持好，不容易出现怪问题（目前：大型网站都有使用，如：腾迅，网易，新浪等等）
+    缺点：代码多，不少初学者不理解原理，要两句代码结合使用，才能让主流浏览器都支持
+建议：推荐使用，建议定义公共类，以减少CSS代码
+
+- ４父级div定义overflow:hidden
+    
+    原理：必须定义width或zoom:1，同时不能定义height，使用overflow:hidden时，浏览器会自动检查浮动区域的高度
+    优点：简单，代码少，浏览器支持好
+    缺点：不能和position配合使用，因为超出的尺寸的会被隐藏
+    建议：只推荐没有使用position或对overflow:hidden理解比较深的朋友使用
+    
+- 5父级div定义overflow:auto
+    原理：必须定义width或zoom:1，同时不能定义height，使用overflow:auto时，浏览器会自动检查浮动区域的高度
+优点：简单，代码少，浏览器支持好
+缺点：内部宽高超过父级div时，会出现滚动条。
+建议：不推荐使用，如果你需要出现滚动条或者确保你的代码不会出现滚动条就使用吧。
+
+
+#图片如何实现垂直剧中的
+- 方法一
+将外部容器的显示模式设置成display:table，这个设置的意思不用多说了吧… img标签外部再嵌套一个span标签，并设置span的显示模式为display:table-cell，这样span内部的内容就相当于表格，可以很方便的使用vertical-align属性来对齐其中的内容了。
+```
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>方法1 - 未知高度的图片垂直居中 - www.cleanthem.com</title>
+<style type="text/css">
+body {
+    height:100%;
+}
+#box{
+    width:500px;height:400px;
+    display:table;
+    text-align:center;
+    border:1px solid #d3d3d3;background:#fff;
+}
+#box span{
+    display:table-cell;
+    vertical-align:middle;
+}
+#box img{
+    border:1px solid #ccc;
+}
+</style>
+<!--[if lte IE 7]>
+<style type="text/css">?
+#box{
+    position:relative;
+    overflow:hidden;
+}
+#box span{
+    position:absolute;
+    left:50%;top:50%;
+}
+#box img{
+    position:relative;
+    left:-50%;top:-50%;
+}
+</style>
+<![endif]-->
+
+</head>
+
+<body>
+<div id="box">
+    <span><img src="images/demo_zl.png" alt="" /></span>
+</div>
+
+</body>
+</html>
+```
+
+- 方法2：
+在img标签外包裹一个p标签，标准浏览器利用p标签的伪类属性:before来实现居中，另外，对于IE6/IE7使用了CSS表达式来实现兼容。
+
+```
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+    <title>方法3 - 未知高度的图片垂直居中 - www.cleanthem.com</title>
+
+<style type="text/css">
+body {
+    height:100%;
+}
+#box{
+    width:500px;height:400px;
+    text-align:center;
+    border:1px solid #d3d3d3;background:#fff;
+}
+#box p{
+    width:500px;height:400px;
+    line-height:400px;  /* 行高等于高度 */
+}
+
+/* 兼容标准浏览器 */
+#box p:before{
+    content:".";  /* 具体的值与垂直居中无关，尽可能的节省字符 */
+    margin-left:-5px; font-size:10px;  /* 修复居中的小BUG */
+    visibility:hidden;  /*设置成隐藏元素*/
+}
+
+#box p img{
+    *margin-top:expression((400 - this.height )/2);  /* CSS表达式用来兼容IE6/IE7 */
+    vertical-align:middle;
+    border:1px solid #ccc;
+}
+</style>
+
+</head>
+
+<body>
+<div id="box">
+    <p><img src="images/demo_zl.png" alt="" /></p>
+</div>
+
+</body>
+</html>
+```
+#css hack你知道哪些？([CSS hack方式一览 ](http://blog.csdn.net/freshlover/article/details/12132801))
+- 什么是CSS hack?
+    - 由于不同厂商的流览器或某浏览器的不同版本（如IE6-IE11,Firefox/Safari/Opera/Chrome等），对CSS的支持、解析不一样，导致在不同浏览器的环境中呈现出不一致的页面展现效果。这时，我们为了获得统一的页面效果，就需要针对不同的浏览器或不同版本写特定的CSS样式，我们把这个针对不同的浏览器/不同版本写相应的CSS code的过程，叫做CSS hack!
+- CSS hack的原理
+    - 由于不同的浏览器和浏览器各版本对CSS的支持及解析结果不一样，以及CSS优先级对浏览器展现效果的影响，我们可以据此针对不同的浏览器情景来应用不同的CSS。
+    
+- CSS hack分类
+    - CSS Hack大致有3种表现形式，CSS属性前缀法、选择器前缀法以及IE条件注释法（即HTML头部引用if IE）Hack，实际项目中CSS Hack大部分是针对IE浏览器不同版本之间的表现差异而引入的。
+    >
+    属性前缀法(即类内部Hack)：例如 IE6能识别下划线"_"和星号" * "，IE7能识别星号" * "，但不能识别下划线"_"，IE6~IE10都认识"\9"，但firefox前述三个都不能认识。
+    选择器前缀法(即选择器Hack)：例如 IE6能识别*html .class{}，IE7能识别*+html .class{}或者*:first-child+html .class{}。
+    IE条件注释法(即HTML条件注释Hack)：针对所有IE(注：IE10+已经不再支持条件注释)： <!--[if IE]>IE浏览器显示的内容 <![endif]-->，针对IE6及以下版本： <!--[if lt IE 6]>只在IE6-显示的内容 <![endif]-->。这类Hack不仅对CSS生效，对写在判断语句里面的所有代码都会生效。
+    
+#谈谈你对CSS盒模型的认识  
+- **标准模型和IE模型的区别?**
+
+    - 这两者的关键差别就在于：W3C盒子模型——属性高（height）和属性宽（width）这两个值不包含 填充（padding）和边框（border）;IE盒子模型——属性高（height）和属性宽（width）这两个值包含 填充（padding）和边框（border）。
+- **CSS是如何设置这两种模型?**
+    - （1）“标准模式”下各个浏览器是没有区别的，以宽度为例：总宽度=marginLeft+borderLeft+paddingLeft+contentWidth+paddingRight+borderRight+marginRight（W3C标准盒子模型）。页面在“怪异模式”下，css中为元素的width和height设置的值在标准浏览器和ie系列(ie9除外)里的代表的含义是不同的（IE盒子模型）。也就是说在‘怪异模式’下ie浏览器使用的是I盒子模型。
+    （2）标准模式和怪异模式的来由？
+    在HTML与CSS的标准化未完成之前，各个浏览器对于HTML和CSS的解析有各自不同的实现，而有很多旧的网页都是按照这些非标准的实现去设计的。在HTML与CSS标准确定之后，浏览器一方面要按照标准去实现对HTML与CSS的支持，另一方面又要保证对非标准的旧网页设计的后向兼容性。因此，现代的浏览器一般都有两种渲染模式：标准模式和怪异模式。在标准模式下，浏览器按照HTML与CSS标准对文档进行解析和渲染；而在怪异模式下，浏览器则按照旧有的非标准的实现方式对文档进行解析和渲染。这样的话，对于旧有的网页，浏览器启动怪异模式，就能够使得旧网页正常显示；对于新的网页，则可以启动标准模式，使得新网页能够使用HTML与CSS的标准特性。
+    （3）浏览器如何确定使用哪种渲染模式
+    知道了这两种渲染模式的来由，那剩下的问题就是浏览器如何能够确定应该使用哪种模式了。其实归根结底就是，浏览器如何能将旧网页与新网页区分开来。
+    平常编写网页的时候，一般都会见到HTML文档的头部会有文档类型声明：DOCTYPE。当浏览器遇到正确的文档声明时，浏览器就会启动标准模式，按照制定的文档类型标准解析和渲染文档。而对于旧有的网页，由于网页编写的当时标准还没有确定，所以一般是不会有文档类型声明的。所以，对于没有文档类型声明或者文档类型声明不正确的文档，浏览器就会认为它是一个旧的HTML文档，就会使用怪异模式解析和渲染该文档。关于DOCTYPE的更详细说明，请戳这里 DOCTYPE声明作用及用法详解。
+    （4）如何兼容IE模型
+    前提是页面处于“怪异模式”，“标准模式”不存在兼容性问题。
+- **JS如何设置和获取盒模型对应的宽和高?([JavaScript盒子模型及其属性](http://www.jianshu.com/p/00497091d3bb))**
+    - clientWidth/ clientHeight: 是当前浏览器可视窗口(一屏幕的)的宽度和高度。
+scrollWidth/ scrollHeight: 是当前页面的实际宽度和高度(所有屏加起来的宽度和高度), 这些是约等于的值。
+不管哪些属性，也不管是什么浏览器，也不管是获取还是设置，想要都兼容，需要写两套:
+document.documentElement[attr]||document.body[attr];必须document.documentElement在前
+
+```   
+document.documentElement.clientWidth || document.body.clientWidth;          document.documentElement.scrollTop || document.body.scrollTop;          document.documentElement.scrollTop = 0; document.body.scrollTop = 0;
+
+```
+    
+```
+// win: 编写一个有关于操作浏览器盒子模型的方法 // 如果值传递了attr, 没有传递value, 默认的意识是获取样式值。 // 如果两个参数都传递了, 意思是设置某一个样式属性的值。 function win(attr, value) { if (typeof value === 'undefined') { // 说明没有传递value return document.documentElement[attr] || document.body[attr]; } document.documentElement[attr] = value; document.body[attr] = value; }
+
+
+```
+
+- **什么是优雅降级和渐进增强**[优雅降级,渐进增强](http://www.jianshu.com/p/d313f1108862)
+>优雅降级=>一开始就构建站点的完整功能，然后针对浏览器测试和修复。比如一开始使用 CSS3 的特性构建了一个应用，然后逐步针对各大浏览器进行 hack 使其可以在低版本浏览器上正常浏览。
+
+>渐进增强=>一开始就针对低版本浏览器进行构建页面，完成基本的功能，然后再针对高级浏览器进行效果、交互、追加功能达到更好的体验。
+
+----------
+
+
+
+> - 优雅降级观点认为应该针对那些最高级、最完善的浏览器来设计网站。而将那些被认为“过时”或有功能缺失的浏览器下的测试工作安排在开发周期的最后阶段，并把测试对象限定为主流浏览器（如 IE、Mozilla 等）的前一个版本。在这种设计范例下，旧版的浏览器被认为仅能提供“简陋却无妨 (poor, but passable)” 的浏览体验。你可以做一些小的调整来适应某个特定的浏览器。但由于它们并非我们所关注的焦点，因此除了修复较大的错误之外，其它的差异将被直接忽略。
+> - 渐进增强观点则认为应关注于内容本身。请注意其中的差别：我甚至连“浏览器”三个字都没提。内容是我们建立网站的诱因。有的网站展示它，有的则收集它，有的寻求，有的操作，还有的网站甚至会包含以上的种种，但相同点是它们全都涉及到内容。这使得渐进增强成为一种更为合理的设计范例。这也是它立即被 Yahoo! 所采纳并用以构建其“分级式浏览器支持 (Graded Browser Support)”策略的原因所在。
+
+# 谈谈你对BFC的了解([BFC](http://blog.csdn.net/riddle1981/article/details/52126522))
+> - **什么是BFC**
+BFC(block formatting context）：简单来说，BFC 就是一种属性，这种属性会影响着元素的定位以及与其兄弟元素之间的相互作用。
+- **形成BFC的条件**
+1、浮动元素，float 除 none 以外的值；
+2、绝对定位元素，position（absolute，fixed）；
+3、display 为以下其中之一的值 inline-blocks，table-cells，table-captions；
+4、overflow 除了 visible 以外的值（hidden，auto，scroll）
+- BFC **应用场景**
+1. 清除内部浮动
+我们在布局时经常会遇到这个问题：对子元素设置浮动后，父元素会发生高度塌陷，也就是父元素的高度变为0。解决这个问题，只需要把把父元素变成一个BFC就行了。常用的办法是给父元素设置overflow:hidden。
+2. 垂直margin合并
+在CSS当中，相邻的两个盒子的外边距可以结合成一个单独的外边距。这种合并外边距的方式被称为折叠，并且因而所结合成的外边距称为折叠外边距。
+折叠的结果：
+3. 1.两个相邻的外边距都是正数时，折叠结果是它们两者之间较大的值  
+   2.两个相邻的外边距都是负数时，折叠结果是两者绝对值的较大值。
+   3 两个外边距一正一负时，折叠结果是两者的相加的和
+
+#js类
+# DOM事件
+- **DOM 事件级别有哪些？**
+>dom 0 级 dom2 级
+
+- **描述DOM事件捕获和冒泡的具体流程?**
+> 1 捕获阶段=>先由文档的根节点document往事件触发对象，从外向内捕获事件对象；
+  2 到达目标事件位置（事发地），触发事件；
+  3再从目标事件位置往文档的根节点方向回溯，从内向外冒泡事件对象。
+  
+  ![](面试题_files/59c367380466846053000000.png)
+  
+- **event 对象常见应用场景**  
+
+  ![](面试题_files/59c3684c0466846053000001.png)
+- **事件委托是什么**
+> 而事件委托就是利用的DOM事件的事件捕获阶段。把具体dom上发生的事件，委托给更大范围的dom去处理。好比送信员，如果每次都把信件送给每一户，非常繁琐。但是如果交给一个大范围的管理者，比如小区的传达室，那么事情会变得非常简单。事件委托就类似这种原理，我页面中有很多按钮，如果不使用事件委托，我只能在每个按钮上注册事件。非常麻烦。但如果我把事件注册在一个大范围的div（假设所有的按钮都在这个div中），那么我只要注册一次事件，就可以处理所有按钮（只要按钮包含在上述div中）事件的响应了。
+
+- 事件冒泡,e.target和e.currentTarget的区别?([e.target和e.currentTarget区别](http://www.jianshu.com/p/1dd668ccc97a))
+>MDN中对target的解释为，一个触发事件的对象的引用， 当事件处理程序在事件的冒泡或捕获阶段被调用时。
+而对于currentTarget，它指的是当事件遍历DOM时，标识事件的当前目标。它总是引用事件处理程序附加到的元素，而不是event.target，它标识事件发生的元素。
+
+- **浏览器的兼容问题 Js**([浏览器的兼容问题](http://www.jianshu.com/p/419436afc845))
+> 1 event 事件问题
+  2 浏览器宽高问题
+  3 DOM节点相关的问题
+  4 获取元素的非行间样式值
+  5 设置监听事件
+  6 阻止默认事件
+  
+# js 原生
+- **JS中有哪些数据类型**
+> 基本数据类型：Number String Boolean null undefind
+  引用数据类型：数组类型（array），对象类型（object），函数类型（function），正则类型（regexp）
+  
+- **什么是闭包？闭包作用？在工作中是如何应用的?**  
+> 3、闭包的概念
+ 各种专业文献的闭包定义都非常抽象，我的理解是: 闭包就是能够读取其他函数内部变量的函数。
+ 由于在javascript中，只有函数内部的子函数才能读取局部变量，所以说，闭包可以简单理解成“定义在一个函数内部的函数“。
+ 所以，在本质上，闭包是将函数内部和函数外部连接起来的桥梁。
+ 4、闭包的用途
+ 闭包可以用在许多地方。它的最大用处有两个，一个是前面提到的可以读取函数内部的变量，另一个就是让这些变量的值始终保持在内存中，不会在f1调用后被自动清除。 
+ 
+- **JS实现继承的几种方式?** 
+> 1.原型链继承
+  2.借用构造函数继承
+  3.组合式继承
+  4.原型式继承
+  5.寄生式继承
+  6.寄生式组合继承
+  
+- **创建对象的三种方式** 
+> 第一种模式：工厂方式 
+
+ ```
+var lev=function(){
+return "脚本之家";
+};
+function Parent(){
+var Child = new Object();
+Child.name="脚本";
+Child.age="4";
+Child.lev=lev;
+return Child;
+};
+var x = Parent();
+alert(x.name);
+alert(x.lev()); 
+ ```
+- **new Person()时发生了什么**
+> A：将Person.class文件加载到内存中。
+                B：在堆内存中创建一个对象Person。
+                C：把Person中的属性进行默认初始化。
+                D：把Person中的属性进行显示初始化。
+                E：调用构造代码块(如果没有，不执行这个操作)。
+                F：调用构造函数进行初始化。
+                G：在栈内存中声明Person类型的变量P。
+                H：把堆内存的地址(引用)赋给了栈内存中P。
+- **什么是深拷贝和浅拷贝？**
+
+ > 浅拷贝：浅拷贝是拷贝引用，拷贝后的引用都是指向同一个对象的实例，彼此之间的操作会互相影响
+深拷贝：在堆中重新分配内存，并且把源对象所有属性都进行新建拷贝，以保证深拷贝的对象的引用图不包含任何原有对象或对象图上的任何对象，拷贝后的对象与原来的对象是完全隔离，互不影响
+- **手工模拟完整的bind方法**([bind方法](http://blog.csdn.net/daimomo000/article/details/72897035))
+```
+Function.prototype.bind2 = function (context) {
+
+    if (typeof this !== "function") {
+      throw new Error("Function.prototype.bind - what is trying to be bound is not callable");
+    }
+
+    var self = this;
+    var args = Array.prototype.slice.call(arguments, 1);
+    var fNOP = function () {};
+
+    var fbound = function () {
+        self.apply(this instanceof self ? this : context, args.concat(Array.prototype.slice.call(arguments)));
+    }
+
+    fNOP.prototype = this.prototype;
+    fbound.prototype = new fNOP();
+
+    return fbound;
+
+}
+```
+- **什么是节流和防抖？**
+> 节流：如果用手指一直按住一个弹簧，它将不会弹起直到你松手为止。
+ 也就是说当调用动作n毫秒后，才会执行该动作，若在这n毫秒内又调用此动作则将重新计算执行时间。
+ ```
+
+ var debounce = function(idle, action){
+  var last
+  return function(){
+    var ctx = this, args = arguments
+    clearTimeout(last)
+    last = setTimeout(function(){
+        action.apply(ctx, args)
+    }, idle)
+  }
+}
+ ```
+> 防抖:如果将水龙头拧紧直到水是以水滴的形式流出，那你会发现每隔一段时间，就会有一滴水流出。
+ 也就是会说预先设定一个执行周期，当调用动作的时刻大于等于执行周期则执行该动作，然后进入下一个新周期。
+    ```
+var throttle = function(delay, action){
+  var last = 0return function(){
+    var curr = +new Date()
+    if (curr - last > delay){
+      action.apply(this, arguments)
+      last = curr 
+    }
+  }
+}
+    ```
+- **上拉刷新和下拉加载的实现原理？**
+> 监听scroll事件，判断已滚动的距离离屏幕底部多远，超过阙值，就去拉取数据
+```
+ onPullUpMove(e) {
+    // 使用 pageY 对比有问题
+    if (e.touches[0].screenY < this._pullUpStartPageY && this._reachBottom()) {
+      // console.log('滚动条到了底部，pull up');
+      this._isPullUp = true;
+    }
+  },
+  onPullUpEnd(e) {
+    if (this._isPullUp && this.props.onEndReached) {
+      this.props.onEndReached(e);
+    }
+    this._isPullUp = false;
+  },
+  _reachBottom() {
+    const element = this._pullUpEle;
+    if (element === document.body) {
+      return element.scrollHeight - element.scrollTop === window.innerHeight;
+    }
+    return element.scrollHeight - element.scrollTop === element.clientHeight;
+  }
+```
+- **写一个验证邮件的正则表达式**
+> ^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$
+
+- 事件绑定和普通事件的区别
+> 普通事件中的onclick是DOM0级事件只支持单个事件，会被其他onclick事件覆盖，而事件绑定中的addEventListener是DOM2级事件可以添加多个事件而不用担心被覆盖
+
+- **JAVASCRIPT 的模板引擎的实现用过什么？原理是什么**
+
+
+        正则抠出要匹配的内容
+        装入数组
+        分辨js逻辑部分
+        引擎函数
+        把data扔进去
+
+- **合并两个对象** 
+> Object.assign
+
+- **动态向一个div中插入1000个div标签，如何实现？（考性能）**
+> 不太会，得好好查查
+
+- HTML5新特性
+> 如：绘图canvas；用于媒介回放的video和audio元素；本地存储localStorage;语义化元素；表单控件等等新增的功能，都是HTML5新特性。
+- 严格模式和非严格模式的区别
+> （前三条非常重要）
+1.在严格模式中禁止使用width语句；
+2.在严格模式中，所有的变量都要先声明；（在非中，这种隐式声明的全局变量的方法是给全局对象新添加一个新属性）；
+3.在严格模式中，调用的函数中的一个this值是undefined（在非中，调用的函数中的this总数全局对象）；
+如何判定JavaScript实现是否支持严格模式：
+var hasStrictMode = (function(){
+"use strict";
+return this===undefined
+}())
+4.在严格模式中，当通过call（）或apply（）来调用函数时，其中的this值就是通过call（）或者apply（）传入的第一个参数；（在非中，null和undefined被全局对象和转换为对象的非对象值所替代）；
+5.在严格模式中，给只读属性赋值和给不可扩展的对象创建新成员都将抛出一个类型错误异常；（在非中，这些操作只是简单地操作失败，不会报错）；
+6.在严格模式中，传入eval（）的代码不能在调用程序所在的上下文中声明变量或定义函数；（在非中，可以这样做，相反，变量和函数的定义是在eval（）创建的新作用域中，这个作用域在eval（）返回时就弃用了）
+
+- **对于js中浮点数计算会丢失精度的问题**
+>Javascript采用了IEEE-745浮点数表示法（几乎所有的编程语言都采用），这是一种二进制表示法，可以精确地表示分数，比如1/2，1/8，1/1024。遗憾的是，我们常用的分数（特别是在金融的计算方面）都是十进制分数1/10，1/100等。二进制浮点数表示法并不能精确的表示类似0.1这样 的简单的数字，上诉代码的中的x和y的值非常接近最终的正确值，这种计算结果可以胜任大多数的计算任务：这个问题也只有在比较两个值是否相等时才会出现。
+javascript的未来版本或许会支持十进制数字类型以避免这些舍入问题，在这之前，你更愿意使用大整数进行重要的金融计算，例如，要使用整数‘分’而不是使用小数‘元’进行货比单位的运算---------以上整理自《Javascript权威指南P37》
+
+#JQuery
+- **jquery.extend , jquery.fn.extend的区别**
+> 两者调用方式不同：
+jQuery.extend(),一般由传入的全局函数来调用，主要是用来拓展个全局函数，如$.init()，$.ajax();
+jQuery.fn.extend(),一般由具体的实例对象来调用，可以用来拓展个选择器，例如$.fn.each();
+两者的主要功能作用不同：
+jQuery.extend(object); 为扩展jQuery类本身，为自身添加新的方法。
+jQuery.fn.extend(object);给jQuery对象添加方法
+
+- **谈一下jquery中的bind，live，delegate，on区别**
+![](面试题_files/59c3a07a4aa36332b4000000.png)
+
+- **document.ready和document.load和$(function(){})有什么区别？**
+> ready和load中ready先执行，load后执行。
+DOM文档加载步骤：
+1）解析HTML结构；
+2）加载外部脚本和样式文件；
+3）解析并执行脚本代码；
+4）构造HTML DOM模型 ；//ready
+5）加载图片等外部文件；
+6）页面加载完毕。//load
+从以上描述可以看出，ready在第（4）步完成之后就执行，而load在第（6）步完成之后才执行
+ready事件：
+ready事件在DOM结构绘制完成之后就会执行，这样能确保就算有大量的媒体文件没有加载出来，JS代码一样可以执行
+load事件：
+load事件必须等到网页中所有内容全部加载完毕之后才被执行。如果一页网页有大量图片的话，则就出现网页文档已经呈现出来但网页数据(脚本初始化)还没加载完毕，导致load事件不能够即时被触发.
+总结：
+ready事件先于load事件被激活，如果网页文档中没有加载外部文件，则它们的响应时间基本上是相同的. 
+
+- **$.data()和$('#aaa').data()各自作用是什么？有什么区别**
+> data() 方法向被选元素附加数据，或者从被选元素获取数据。
+$(#aaa).data()从备选元素返回附加数据
+
+# ES6
+- **什么时候应该用箭头函数？什么时候不能用？ － 请写出ES6中Array.isArray()的实现代码**（[箭头函数的使用](https://zhuanlan.zhihu.com/p/26540168)）
+> 1. 定义对象方法
+1.2 定义原型方法
+
+----------
+>2. 定义事件回调函数
+3. 定义构造函数
+
+- **如何在项目中解析处理es6和es7代码**
+>webpack + Babel 
+
+- **Promise常用方法，Promise.race的作用，then方法里reject和catch的区别**([promise](http://www.cnblogs.com/lvdabao/p/es6-promise-1.html))
+> 
+1.处理异步回调
+2.多个异步函数同步处理
+3.异步依赖异步回调
+4.封装统一的入口办法或者错误处理
+ 二.谁跑的快调用谁！与Promise.all相似的是，Promise.race都是以一个Promise对象组成的数组作为参数，不同的是，只要当数组中的其中一个Promsie状态变成resolved或者rejected时，就可以调用.then方法了。而传递给then方法的值也会有所不同，大家可以再浏览器中运行下面的例子与上面的例子进行对比。
+ 
+----------
+> 
+
+</pre>
+			<!-- html -->
+			<div class="content-html" id="leanote-content-html"></div>
+		</div>
+	</div>
+
+<!-- 该js供其它处理 -->
+<script src="../leanote-markdown.js"></script>
+<script src="http://leanote.github.io/markdown-to-html/markdown-to-html.min.js"></script>
+<script>
+function init() {
+	markdownToHtml(document.getElementById('leanote-content-markdown').value, document.getElementById('leanote-content-html'), function(html) {
+		// 解析后执行
+		if(window.markdownParsed) {
+			window.markdownParsed(html);
+		}
+	});
+	var $m = document.getElementById('tab-markdown');
+	var $h = document.getElementById('tab-html');
+	var $cc = document.getElementById('content-container');
+	function toggleToHtml(isToHtml) {
+		$cc.className = isToHtml ? 'content-container html' : 'content-container';
+	}
+	$m.addEventListener('click', function() {
+		toggleToHtml(false);
+	});
+	$h.addEventListener('click', function() {
+		toggleToHtml(true);
+	});
+}
+
+// 如果不要自动解析html, notParseMarkdown在leanote-markdown.js中定义
+if(!window.notParseMarkdown) {
+	init();
+}
+</script>
+</body>
+</html>
